@@ -2,7 +2,13 @@
 
 @section('content')
 <h1>Client Conferences</h1>
-<p>Name: {{ $userName ?? 'Lukas Matulis' }}</p>
-<p>Group: Client</p>
-<button class="btn btn-primary">Test Button</button>
+
+<ul>
+    @foreach($conferences as $conference)
+        <li>
+            <strong>{{ $conference['name'] }}</strong> - {{ $conference['date'] }}
+            <a href="{{ url('client/conferences/' . $conference['id']) }}">View</a>
+        </li>
+    @endforeach
+</ul>
 @endsection

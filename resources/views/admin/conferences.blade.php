@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Admin Conferences</h1>
-<p>Name: {{ $userName ?? 'Lukas Matulis' }}</p>
-<p>Group: Admin</p>
-<button class="btn btn-secondary">Test Button</button>
+<h1>Admin Panel</h1>
+<p>Welcome, Admin</p>
+
+<a href="{{ url('admin/users') }}" class="btn btn-primary">User Management</a>
+<a href="{{ url('admin/conferences') }}" class="btn btn-primary">Conference Management</a>
 @endsection

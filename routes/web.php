@@ -12,19 +12,19 @@ Route::get('/', function () {
 
 // Client routes
 Route::prefix('client')->group(function () {
-    Route::get('/', [ClientController::class, 'index'])->name('client.index');
-    Route::get('/conferences', [ClientController::class, 'index']);
+    Route::get('/conferences', [App\Http\Controllers\ClientController::class, 'index']);
+    Route::get('/conferences/{id}', [App\Http\Controllers\ClientController::class, 'show']);
 });
 
 // Employee routes
 Route::prefix('employee')->group(function () {
-    Route::get('/', [EmployeeController::class, 'index'])->name('employee.index');
-    Route::get('/conferences', [EmployeeController::class, 'index']);
+    Route::get('/conferences', [App\Http\Controllers\EmployeeController::class, 'index']);
+    Route::get('/conferences/{id}', [App\Http\Controllers\EmployeeController::class, 'show']);
 });
 
 // Admin routes
 Route::prefix('admin')->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name('admin.index');
-
-    Route::resource('conferences', ConferenceController::class);
+    Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.index');
+    Route::resource('users', App\Http\Controllers\Admin\UserController::class);
+    Route::resource('conferences', App\Http\Controllers\Admin\ConferenceController::class);
 });
