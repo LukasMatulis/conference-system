@@ -13,5 +13,5 @@
     @endforeach
 </ul>
 
-<a href="{{ url('employee/conferences') }}">Back to List</a>
+<a href="{{ url('employee/conferences') }}" class="btn btn-secondary">{{ __('messages.back_to_list') }}</a>
 @endsection

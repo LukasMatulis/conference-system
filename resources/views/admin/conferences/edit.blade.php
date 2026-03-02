@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Edit Conference</h1>
+<h1>{{ __('messages.edit_conference') }}</h1>
 
 <form action="{{ route('conferences.update', $conference['id']) }}" method="POST">
     @csrf
@@ -27,6 +27,6 @@
         <input type="text" name="location" value="{{ $conference['location'] }}" class="form-control" required>
     </div>
 
-    <button type="submit" class="btn btn-success">Update</button>
+    <button type="submit" class="btn btn-success">{{ __('messages.update') }}</button>
 </form>
 @endsection

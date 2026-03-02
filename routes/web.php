@@ -12,8 +12,21 @@ Route::get('/', function () {
 
 // Client routes
 Route::prefix('client')->group(function () {
-    Route::get('/conferences', [App\Http\Controllers\ClientController::class, 'index']);
-    Route::get('/conferences/{id}', [App\Http\Controllers\ClientController::class, 'show']);
+    Route::get('/conferences', [ClientController::class, 'index']);
+    Route::get('/conferences/{id}', [ClientController::class, 'show']);
+
+    Route::get('/register', function () {
+        return view('client.register');
+    })->name('client.register');
+
+    Route::post('/register', function (\Illuminate\Http\Request $request) {
+        $data = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+        ]);
+
+        return back()->with('success', 'Registration received (demo)');
+    });
 });
 
 // Employee routes

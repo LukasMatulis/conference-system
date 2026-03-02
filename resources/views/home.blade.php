@@ -2,9 +2,9 @@
 
 @section('content')
     <h1>Lukas Matulis</h1>
-    <p>Group: PIT-23-NL</p>
+    <p>{{ __('messages.group') }}: PIT-23-NL</p>
 
-    <a href="/client/conferences" class="btn btn-primary">Client</a>
-    <a href="/employee/conferences" class="btn btn-success">Employee</a>
-    <a href="/admin" class="btn btn-danger">Admin</a>
+    <a href="/client/conferences" class="btn btn-primary">{{ __('messages.client_conferences') }}</a>
+    <a href="/employee/conferences" class="btn btn-success">{{ __('messages.employee_conferences') }}</a>
+    <a href="/admin" class="btn btn-danger">{{ __('messages.admin_conferences') }}</a>
 @endsection

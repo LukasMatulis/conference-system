@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Create Conference</h1>
+<h1>{{ __('messages.create_conference') }}</h1>
 
 <form action="{{ route('conferences.store') }}" method="POST">
     @csrf
@@ -26,6 +26,6 @@
         <input type="text" name="location" class="form-control" required>
     </div>
 
-    <button type="submit" class="btn btn-success">Create</button>
+    <button type="submit" class="btn btn-success">{{ __('messages.create') }}</button>
 </form>
 @endsection

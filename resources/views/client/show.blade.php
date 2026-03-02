@@ -5,5 +5,5 @@
 <p>{{ $conference['description'] }}</p>
 <p>Date: {{ $conference['date'] }}</p>
 <p>Location: {{ $conference['location'] }}</p>
-<a href="{{ url('client/conferences') }}">Back to List</a>
+<a href="{{ url('client/conferences') }}" class="btn btn-secondary">{{ __('messages.back_to_list') }}</a>
 @endsection

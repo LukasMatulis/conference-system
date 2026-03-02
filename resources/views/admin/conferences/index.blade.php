@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Conferences</h1>
+<h1>{{ __('messages.conference_management') }}</h1>
 
-<a href="{{ route('conferences.create') }}" class="btn btn-primary mb-3">Create New Conference</a>
+<a href="{{ route('conferences.create') }}" class="btn btn-primary mb-3">{{ __('messages.create_conference') }}</a>
 
 <table class="table">
     <thead>
@@ -23,11 +23,11 @@
             <td>{{ $conference['date'] }}</td>
             <td>{{ $conference['location'] }}</td>
             <td>
-                <a href="{{ route('conferences.edit', $conference['id']) }}" class="btn btn-warning">Edit</a>
+                <a href="{{ route('conferences.edit', $conference['id']) }}" class="btn btn-warning">{{ __('messages.edit') }}</a>
                 <form action="{{ route('conferences.destroy', $conference['id']) }}" method="POST" style="display:inline-block;">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">{{ __('messages.delete') }}</button>
                 </form>
             </td>
         </tr>

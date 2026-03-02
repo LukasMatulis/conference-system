@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Users</h1>
+<h1>{{ __('messages.users') }}</h1>
 
 <table class="table">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Actions</th>
+            <th>{{ __('messages.id') }}</th>
+            <th>{{ __('messages.name') }}</th>
+            <th>{{ __('messages.email') }}</th>
+            <th>{{ __('messages.actions') }}</th>
         </tr>
     </thead>
     <tbody>
@@ -19,7 +19,7 @@
             <td>{{ $user['name'] }}</td>
             <td>{{ $user['email'] }}</td>
             <td>
-                <a href="{{ route('users.edit', $user['id']) }}" class="btn btn-warning">Edit</a>
+                <a href="{{ route('users.edit', $user['id']) }}" class="btn btn-warning">{{ __('messages.edit') }}</a>
             </td>
         </tr>
         @endforeach
