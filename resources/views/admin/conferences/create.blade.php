@@ -7,22 +7,22 @@
     @csrf
 
     <div class="mb-3">
-        <label>Name</label>
+        <label>{{ __('messages.name') }}</label>
         <input type="text" name="name" class="form-control" required>
     </div>
 
     <div class="mb-3">
-        <label>Description</label>
+        <label>{{ __('messages.description') }}</label>
         <textarea name="description" class="form-control" required></textarea>
     </div>
 
     <div class="mb-3">
-        <label>Date</label>
+        <label>{{ __('messages.date') }}</label>
         <input type="date" name="date" class="form-control" required>
     </div>
 
     <div class="mb-3">
-        <label>Location</label>
+        <label>{{ __('messages.location') }}</label>
         <input type="text" name="location" class="form-control" required>
     </div>
 

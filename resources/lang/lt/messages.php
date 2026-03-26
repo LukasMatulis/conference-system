@@ -40,4 +40,8 @@ return [
     'register_for_conference_demo' => 'Registracija į konferenciją (demo)',
     'register' => 'Registruotis',
     'registration_success' => 'Registracija gauta (demo)',
+    'location' => 'Vieta',
+    'date' => 'Data',
+    'registered_clients' => 'Užregistruoti klientai',
+    'description' => 'Aprašymas',
 ];

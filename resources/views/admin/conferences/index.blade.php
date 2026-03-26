@@ -8,11 +8,11 @@
 <table class="table">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Date</th>
-            <th>Location</th>
-            <th>Actions</th>
+            <th>{{ __('messages.id') }}</th>
+            <th>{{ __('messages.name') }}</th>
+            <th>{{ __('messages.date') }}</th>
+            <th>{{ __('messages.location') }}</th>
+            <th>{{ __('messages.actions') }}</th>
         </tr>
     </thead>
     <tbody>

@@ -3,10 +3,10 @@
 @section('content')
 <h1>{{ $conference['name'] }}</h1>
 <p>{{ $conference['description'] }}</p>
-<p>Date: {{ $conference['date'] }}</p>
-<p>Location: {{ $conference['location'] }}</p>
+<p>{{ __('messages.date') }}: {{ $conference['date'] }}</p>
+<p>{{ __('messages.location') }}: {{ $conference['location'] }}</p>
 
-<h3>Registered Clients:</h3>
+<h3>{{ __('messages.registered_clients') }}:</h3>
 <ul>
     @foreach($conference['clients'] as $client)
         <li>{{ $client }}</li>
